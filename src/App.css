@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #FADDE1;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.opacity-pink {
+  background-color: #FADDE1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+    font-family: 'Autography';
+    src: url('../Autography.otf');
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Valentine';
+    src: url('../Valentine_Cute.ttf');
+}
+
+@font-face {
+    font-family: 'filxgirl';
+    src: url('../Filxgirl.TTF');
+}
+
+.button-text {
+    color:#FADDE1
+}
+
+h2 {
+    font-family: 'Valentine';
+    font-size: 3em;
+}
+
+.lato {
+    font-family: 'Lato';
+}
+
+.counter {
+    font-family: 'Valentine';
+}
+
+.cute {
+    font-family: 'Autography';
+    font-size: 3em;
+}
+
+img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-bg {
+    background-color: #FFCAD4;
+    color:#FFCAD4
+}
+
+.hover-card {
+    background-color: #ff93a6;
+}
+
+.text-pink {
+    color: #FF97B7;
+}
+
+.darker-pink{
+    color:#fa8dae;
+}
+@keyframes slideRight {
+    from {
+      transform: translateX(-500px);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .slide-right-animation {
+    transition: transform 1s ease-out;
   }
-  to {
-    transform: rotate(360deg);
+
+  .slide-right-animation.slide-in {
+    transform: translateX(100%);
   }
+  
+  .fade-out-animation {
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .fade-out-animation.fade-out {
+    opacity: 0;
+    display: hidden;
+    transform: translateX(500%);
+  }
+
+  .fade-in-animation {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .fade-in {
+    opacity: 1;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      display: hidden;
+    }
+    to {
+      opacity: 1;
+      display:flex;
+    }
+  }
+
+  .slide-up {
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  /* Scrollbar */
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #FADDE1;
+    border-radius: 24px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 24px;
+    background: #FFA6C1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #FFA6C1;
+  }
