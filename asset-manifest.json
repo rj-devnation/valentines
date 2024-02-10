@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/your-repo-name/static/css/main.644e6551.css",
+    "main.js": "/your-repo-name/static/js/main.1d857831.js",
+    "static/js/592.7a1f8794.chunk.js": "/your-repo-name/static/js/592.7a1f8794.chunk.js",
+    "static/media/carmela_cropped.webp": "/your-repo-name/static/media/carmela_cropped.005fc07a01a8af118394.webp",
+    "static/media/me.jpg": "/your-repo-name/static/media/me.2f2c0489fbfd5b58ab0b.jpg",
+    "static/media/Valentine_Cute.ttf": "/your-repo-name/static/media/Valentine_Cute.55d2d929f21bf6e7d50d.ttf",
+    "static/media/Lato-Regular.ttf": "/your-repo-name/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
+    "static/media/Filxgirl.TTF": "/your-repo-name/static/media/Filxgirl.e5573a6ecbe353b79c24.TTF",
+    "static/media/Autography.otf": "/your-repo-name/static/media/Autography.4a770540027c18beeccd.otf",
+    "index.html": "/your-repo-name/index.html",
+    "main.644e6551.css.map": "/your-repo-name/static/css/main.644e6551.css.map",
+    "main.1d857831.js.map": "/your-repo-name/static/js/main.1d857831.js.map",
+    "592.7a1f8794.chunk.js.map": "/your-repo-name/static/js/592.7a1f8794.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.644e6551.css",
+    "static/js/main.1d857831.js"
+  ]
+}
