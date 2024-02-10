@@ -5,9 +5,9 @@ import Person from './components/Person.js';
 
 function App() {
   return (
-    <>
-    <Home />
-    </>
+    <div>
+      <Home />
+    </div>
   );
 }
 

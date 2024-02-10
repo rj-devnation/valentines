@@ -8,7 +8,7 @@ body {
 }
 
 .opacity-pink {
-  background-color: #FADDE1;
+    background-color: #FADDE1;
 }
 
 @font-face {
@@ -68,6 +68,10 @@ img {
     background-color: #ff93a6;
 }
 
+.hover-darker-pink:hover{
+    color:#fa8dae;
+}
+
 .text-pink {
     color: #FF97B7;
 }
@@ -75,6 +79,7 @@ img {
 .darker-pink{
     color:#fa8dae;
 }
+
 @keyframes slideRight {
     from {
       transform: translateX(-500px);

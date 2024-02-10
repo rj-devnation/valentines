@@ -10,7 +10,11 @@ function Home(){
     const [yesSize, setYesSize] = useState(16);
     const [buttonWidth, setButtonWidth] = useState(52); // Initial width of the "Yes" button
     const [buttonHeight, setButtonHeight] = useState(72); // Initial width of the "Yes" button
+    const [noSize, setNoSize] = useState(16);
+    const [noButtonWidth, setNoButtonWidth] = useState(52); // Initial width of the "Yes" button
+    const [noButtonHeight, setNoButtonHeight] = useState(72); // Initial width of the "Yes" button
     const buttonRef = useRef(null);
+    const noButtonRef = useRef(null)
     const [noCount, setNoCount] = useState(0)
     const [showYes, setShowYes] = useState(false)
 
@@ -33,6 +37,12 @@ function Home(){
 
     const handleRejection = () => {
         setNoCount(prevCount => prevCount + 1)
+        // No Button
+        setNoSize(prevSize => prevSize - 2)
+        setNoButtonHeight(prevHeight => prevHeight - 10)
+        setNoButtonWidth(prevWidth => prevWidth - 10)
+
+        // Yes Button
         setButtonHeight(prevHeight => prevHeight + 10)
         setButtonWidth(prevWidth => prevWidth + 10)
         setYesSize(prevSize => prevSize + 2)
@@ -67,34 +77,34 @@ function Home(){
                             </p>
                             <p className="pt-3">Laugh: Like a seal</p>
                         </div>
-                        <button onClick={handleValentine} className={`mb-10 p-10 px-8 counter card-bg darker-pink tracking-[0.25em] font-semibold text-2xl w-full mt-8 shadow-lg rounded-lg relative left-[600px] bottom-[250px] ${isSlideRight ? 'fade-in-animation fade-in slide-up block' : 'hidden'}`}>
+                        <button onClick={handleValentine} className={`mb-10 p-6 px-8 counter bg-[#FF97B7] text-white hover-darker-pink hover:bg-[#FFCAD4] tracking-[0.25em] font-semibold text-2xl w-[70%] mt-8 shadow-lg rounded-lg relative left-[600px] bottom-[250px] transform transition-transform duration-500 hover:-translate-y-5 ${isSlideRight ? 'fade-in-animation fade-in slide-up block' : 'hidden'}`}>
                             Next
                         </button>
                     </div>
                     {!showYes && (
                     <div className={`${isValentine ? 'flex flex-col' : 'hidden '} text-wrap mb-10 p-10 px-8 cute card-bg darker-pink tracking-[0.25em] font-semibold text-2xl mt-8 shadow-lg rounded-lg relative right-[80px] ${isSlideRight ? 'fade-in-animation fade-in slide-up block' : 'hidden'}`}>
                         <p className="text-center leading-relaxed">Will you be my Valentine?</p>
-                        <div className={`flex mx-auto`}>
-                        <button onClick={handleYes} ref={buttonRef} style={{ fontSize: `${yesSize}px`, lineHeight: `${yesSize}px`, paddingTop: `${yesSize + 28}`}} className={`text-${yesSize} h-max mb-10 p-10 mr-4 px-8 counter hover-card card-bg tracking-[0.25em] font-semibold mt-8 shadow-lg rounded-lg`}>
-                            Yes
-                        </button>
-                        <button onClick={handleRejection} className="w-[110px] h-[96px] mb-10 p-10 px-8 text-base counter hover-card card-bg tracking-[0.25em] font-semibold mt-8 shadow-lg rounded-lg">
-                            No
-                        </button>
+                        <div className={`flex mx-auto items-center`}>
+                            <button onClick={handleYes} ref={buttonRef} style={{ fontSize: `${yesSize}px`, lineHeight: `${yesSize}px`, padding: `${yesSize + 20}px`}} className={`text-${yesSize} h-max mb-10 p-10 mr-4 px-8 counter hover-card card-bg tracking-[0.25em] font-semibold mt-8 shadow-lg rounded-lg`}>
+                                Yes
+                            </button>
+                            <button onClick={handleRejection} ref={noButtonRef} style={{ fontSize: `${noSize}px`, lineHeight: `${noSize}px`, padding: `${noSize + 20}px`}} className={`text-${noSize} h-max mb-10 p-10 mr-4 px-8 counter hover-card card-bg tracking-[0.25em] font-semibold mt-8 shadow-lg rounded-lg`}>
+                                No
+                            </button>
                         </div>
                     </div>
                     )}
                 </div>
                 {showYes && (
                 <>
-                    <div className="opacity-pink opacity-70 w-screen h-screen absolute bottom-[204px] right-[-206px]">
+                    <div className="w-screen h-screen absolute bottom-[204px] right-[-206px]">
                     </div>
-                    <div className="z-[1] rounded-lg card-bg darker-pink mx-auto absolute left-[450px] top-[185px] font-semibold shadow-lg p-8">
+                    <div className="z-[1] rounded-lg card-bg darker-pink mx-auto absolute left-[385px] top-[185px] font-semibold shadow-lg p-8">
                         <p>
                             If you're reading this, you've made a good choice!
                             <br/>
                             <br/>
-                            Here are THREE options to eat out on Valentine's Day:
+                            Here are THREE options on Valentine's Day:
                             <br/>
                             <br/>
                             Restaurant: Damecca
@@ -121,7 +131,7 @@ function Home(){
                             -- OR --
                             <br/>
                             <br/>
-                            Restaurant: Take-out Dawon / Eat at my place and cuddle
+                            Restaurant: Take-out Dawon / Eat at my place and cuddle / Arts n Craft
                             <br/>
                             Time: TBA
                             <br/>
