@@ -34,7 +34,7 @@ function HeartFiller({  startAnimation }) {
                 {[...Array(10)].map((_, index) => (
                 <span key={index} className="">
                     {/* Fill SVG */}
-                    <svg className={`w-8 h-8 fill-[#FF97B7] transition-width duration-200 ease-in-out ${index >= filledHearts ? 'scale-0 w-1 md:0' : 'scale-100 w-full'}`}
+                    <svg className={`w-8 h-8 fill-[#FF97B7] transition-width duration-200 ease-in-out ${index >= filledHearts ? 'scale-0 w-[0.75rem] md:w-0' : 'scale-100 w-full'}`}
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="none"
@@ -45,7 +45,7 @@ function HeartFiller({  startAnimation }) {
                 ))}
             </div>
             <div>
-                <p className="text-pink font-bold text-center text-base counter md:text-2xl">
+                <p className="text-pink font-bold text-center text-base counter lg:text-2xl">
                     {filledHearts}/10
                 </p>
                 {filledHearts < 10 ? (
@@ -53,7 +53,7 @@ function HeartFiller({  startAnimation }) {
                         <button
                         onClick={startFilling}
                         disabled={isFilling}
-                        className={`${showButton} flex-initial mt-4 bg-[#FF97B7] hover:bg-[#FFCAD4] w-52 md:text-4xl md:py-5 py-3 text-center align-middle text-white font-bold rounded-xl transform transition-transform duration-500 hover:-translate-y-2 cursor-pointer`}
+                        className={`${showButton} flex-initial mt-4 bg-[#FF97B7] hover:bg-[#FFCAD4] w-52 md:text-2xl lg:text-4xl lg:py-5 py-3 text-center align-middle text-white font-bold rounded-xl transform transition-transform duration-500 hover:-translate-y-2 cursor-pointer`}
                         >
                         {buttonText}
                         </button>
@@ -62,7 +62,7 @@ function HeartFiller({  startAnimation }) {
                     <div>
                         <button
                         onClick={handleAlternativeButtonClick}
-                        className='flex-initial mt-4 bg-[#FF97B7] hover:bg-[#FFCAD4] w-52 md:text-4xl md:py-5 py-3 text-center align-middle text-white font-bold rounded-xl transform transition-transform duration-500 hover:-translate-y-2 cursor-pointer'
+                        className='flex-initial mt-4 bg-[#FF97B7] hover:bg-[#FFCAD4] w-52 md:text-2xl lg:text-4xl lg:py-5 py-3 text-center align-middle text-white font-bold rounded-xl transform transition-transform duration-500 hover:-translate-y-2 cursor-pointer'
                         >
                             {buttonText}
                         </button>

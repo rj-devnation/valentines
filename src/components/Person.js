@@ -11,9 +11,9 @@ function Person({name, className}){
         imageName = rj
     }
     return(
-        <div className={`flex flex-col cute text-name text-center align-middle text-pink gap-y-7 items-center px-4 pt-4 rounded-lg shadow-lg card-bg md:w-[348px] md:h-[420px] ${className}`}>
+        <div className={`flex flex-col cute text-name text-center align-middle text-pink gap-y-7 items-center px-4 py-4 rounded-lg shadow-lg card-bg md:w-[348px] ${className}`}>
             <img src={imageName} alt={name} />
-            <p className="text-5xl md:text-6xl text-wrap">{name}</p>
+            <p className="text-5xl text-wrap">{name}</p>
         </div>
     )
 }

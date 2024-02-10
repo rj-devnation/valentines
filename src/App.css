@@ -101,7 +101,7 @@ img {
   
   .fade-out-animation {
     opacity: 1;
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 1s ease-out, transform 1s ease-out;
   }
   
   .fade-out-animation.fade-out {
@@ -112,7 +112,7 @@ img {
 
   .fade-in-animation {
     opacity: 0;
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 0.5s ease-out, transform 3s ease-out;
   }
 
   .fade-in {
@@ -132,7 +132,7 @@ img {
 
   .slide-up {
     animation-name: slideUp;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-out;
   }
 
