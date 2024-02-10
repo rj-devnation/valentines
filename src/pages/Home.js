@@ -58,14 +58,14 @@ function Home(){
         )}
         {showContent && (
           <div className="md:mt-4 w-screen">
-            <h2 className='md:text-center px-5 sm:text-center text-4xl leading-relaxed md:text-5xl text-pink py-2 pb-5 rounded-full md:mt-10 mx-auto md:mx-20'>
+            <h2 className='md:text-center px-10 sm:text-center text-3xl leading-relaxed md:text-5xl text-pink py-2 pb-5 rounded-full md:mt-10 mx-auto md:mx-20'>
             Love Compatibility
             </h2>
-            <div className={`w-full flex flex-col md:flex-row justify-between px-4 md:px-96 ${isSlideRight ? 'flex-col' : ''}`}>
+            <div className={`w-full flex flex-col md:flex-row justify-between px-8 md:px-96 ${isSlideRight ? 'flex-col' : ''}`}>
                     <Person name='Carmela Lamsen' className={`px-4 md:mt-32 ${isSlideRight ? 'md:transform md:transition-transform md:duration-1000 md:translate-x-96 md:mt-8' : ''}`}/>
                     <div id="chart" className={`${isValentine ? 'hidden' : ''} md:max-w-[489px] px-5 pt-5 mb-4 pb-4 counter card-bg darker-pink tracking-[0.25em] font-semibold text-2xl w-full mt-8 shadow-lg rounded-lg ${isSlideRight ? 'fade-in-animation fade-in slide-up md:mt-12 md:block' : 'hidden'}`}>
-                        <h3 className="md:text-center leading-relaxed">Compatibility Chart</h3>
-                        <div className="text-[16px] tracking-wide lato">
+                        <h3 className="md:text-center leading-relaxed text-lg">Compatibility Chart</h3>
+                        <div className="text-[13px] tracking-wide lato">
                             <p className="pt-3 md:pt-8">Compatibility: 10/10</p>
                             <p className="md:pt-3">Lovable: 10/10</p>
                             <p className="md:pt-3">Marriage: High</p>
@@ -144,7 +144,7 @@ function Home(){
                     <HeartFiller id="heartfiller" startAnimation={startAnimation}/>
                 </div>
                 <div className={`my-4 md:my-32 ${isSlideRight ? 'fade-out-animation fade-out' : ''}`}>
-                    <Person name='R.J. Geli' />
+                    <Person name='R.J. Geli' className={`px-4`} />
                 </div>
             </div>
           </div>
