@@ -49,46 +49,42 @@ function Home(){
     }
 
   return (
-    <div className="flex justify-center items-center w-[1500px] mx-auto">
+    <div className="flex justify-center items-center lg:w-[1500px] mx-auto">
       <div className={`transition-all duration-[2000ms] ease-in-out ${showContent ? 'opacity-100 translate-y-0' : 'm-96'}`}>
         {!showContent && (
-          <button onClick={handleStartButtonClick} className="bg-[#FF97B7] hover:bg-[#FFCAD4] w-72 text-5xl px-10 py-5 text-center align-middle  text-white font-bold rounded-xl transform transition-transform duration-500 hover:-translate-y-5">
+          <button onClick={handleStartButtonClick} className="bg-[#FF97B7] hover:bg-[#FFCAD4] w-72 text-5xl px-10 py-5 text-center align-middle text-white font-bold rounded-xl transform transition-transform duration-500 hover:-translate-y-5">
             Open
           </button>
         )}
         {showContent && (
-          <div className="mt-4">
-            <div>
-                <h2 className='text-center text-pink py-8 rounded-full mt-10 mx-auto mb-20'>
-                Love Compatibility
-                </h2>
-            </div>
-            <div className={`w-full flex justify-between mt-7`}>
-                <div className={`w-1/2 text-nowrap pr-18 ${isSlideRight ? 'slide-right-animation slide-in' : ''}`}>
-                    <Person name='Carmela Lamsen' />
-                    <div id="chart" className={`${isValentine ? 'hidden' : ''} mb-10 p-10 px-8 max-h-[375px] counter card-bg darker-pink tracking-[0.25em] font-semibold text-2xl w-full mt-8 shadow-lg rounded-lg relative right-[80px] ${isSlideRight ? 'fade-in-animation fade-in slide-up block' : 'hidden'}`}>
-                        <h3 className="text-center">Compatibility Chart</h3>
+          <div className="md:mt-4 w-screen">
+            <h2 className='md:text-center px-5 sm:text-center text-4xl leading-relaxed md:text-5xl text-pink py-2 pb-5 rounded-full md:mt-10 mx-auto md:mx-20'>
+            Love Compatibility
+            </h2>
+            <div className={`w-full flex flex-col md:flex-row justify-between px-4 md:px-96 ${isSlideRight ? 'flex-col' : ''}`}>
+                    <Person name='Carmela Lamsen' className={`px-4 md:mt-32 ${isSlideRight ? 'md:transform md:transition-transform md:duration-1000 md:translate-x-96 md:mt-8' : ''}`}/>
+                    <div id="chart" className={`${isValentine ? 'hidden' : ''} md:max-w-[489px] px-5 pt-5 mb-4 pb-4 counter card-bg darker-pink tracking-[0.25em] font-semibold text-2xl w-full mt-8 shadow-lg rounded-lg ${isSlideRight ? 'fade-in-animation fade-in slide-up md:mt-12 md:block' : 'hidden'}`}>
+                        <h3 className="md:text-center leading-relaxed">Compatibility Chart</h3>
                         <div className="text-[16px] tracking-wide lato">
-                            <p className="pt-8">Compatibility: 10/10</p>
-                            <p className="pt-3">Lovable: 10/10</p>
-                            <p className="pt-3">Marriage: High</p>
-                            <p className="pt-3 text-wrap">
+                            <p className="pt-3 md:pt-8">Compatibility: 10/10</p>
+                            <p className="md:pt-3">Lovable: 10/10</p>
+                            <p className="md:pt-3">Marriage: High</p>
+                            <p className="md:pt-3  leading-normal text-wrap">
                                 Reasons to love you: loving, caring, loves unconditionally, weird af, understands you, cute smile, amazing cuddler
                             </p>
-                            <p className="pt-3">Laugh: Like a seal</p>
+                            <p className="md:pt-3">Laugh: Like a seal</p>
                         </div>
-                        <button onClick={handleValentine} className={`mb-10 p-6 px-8 counter bg-[#FF97B7] text-white hover-darker-pink hover:bg-[#FFCAD4] tracking-[0.25em] font-semibold text-2xl w-[70%] mt-8 shadow-lg rounded-lg relative left-[600px] bottom-[250px] transform transition-transform duration-500 hover:-translate-y-5 ${isSlideRight ? 'fade-in-animation fade-in slide-up block' : 'hidden'}`}>
+                        <button onClick={handleValentine} className={`md:relative md:bottom-[500px] md:left-[530px] py-6 px-8 counter w-full bg-[#FF97B7] text-white hover-darker-pink hover:bg-[#FFCAD4] tracking-[0.25em] font-semibold text-2xl mt-3 shadow-lg rounded-lg md:transform md:transition-transform md:duration-500 md:hover:-translate-y-5 ${isSlideRight ? 'md:fade-in-animation md:fade-in md:slide-up md:block' : 'hidden'}`}>
                             Next
                         </button>
-                    </div>
                     {!showYes && (
-                    <div className={`${isValentine ? 'flex flex-col' : 'hidden '} text-wrap mb-10 p-10 px-8 cute card-bg darker-pink tracking-[0.25em] font-semibold text-2xl mt-8 shadow-lg rounded-lg relative right-[80px] ${isSlideRight ? 'fade-in-animation fade-in slide-up block' : 'hidden'}`}>
+                    <div className={`${isValentine ? 'flex flex-col justify-center' : 'hidden '} text-wrap mb-10 p-10 px-8 cute card-bg darker-pink tracking-[0.1em] font-semibold text-xl mt-8 shadow-lg rounded-lg md:relative md:right-[80px] ${isSlideRight ? 'md:transform md:transition-transform md:duration-1000 md:translate-x-80 md:mt-12' : 'hidden'}`}>
                         <p className="text-center leading-relaxed">Will you be my Valentine?</p>
-                        <div className={`flex mx-auto items-center`}>
-                            <button onClick={handleYes} ref={buttonRef} style={{ fontSize: `${yesSize}px`, lineHeight: `${yesSize}px`, padding: `${yesSize + 20}px`}} className={`text-${yesSize} h-max mb-10 p-10 mr-4 px-8 counter hover-card card-bg tracking-[0.25em] font-semibold mt-8 shadow-lg rounded-lg`}>
+                        <div className={`flex flex-col mx-auto gap-2 items-center`}>
+                            <button onClick={handleYes} ref={buttonRef} style={{ fontSize: `${yesSize}px`, lineHeight: `${yesSize}px`, padding: `${yesSize + 20}px`}} className={`text-${yesSize} h-max p-10 px-8 counter hover-card card-bg tracking-[0.25em] font-semibold mt-4 shadow-lg rounded-lg`}>
                                 Yes
                             </button>
-                            <button onClick={handleRejection} ref={noButtonRef} style={{ fontSize: `${noSize}px`, lineHeight: `${noSize}px`, padding: `${noSize + 20}px`}} className={`text-${noSize} h-max mb-10 p-10 mr-4 px-8 counter hover-card card-bg tracking-[0.25em] font-semibold mt-8 shadow-lg rounded-lg`}>
+                            <button onClick={handleRejection} ref={noButtonRef} style={{ fontSize: `${noSize}px`, lineHeight: `${noSize}px`, padding: `${noSize + 20}px`}} className={`text-${noSize} h-max p-10 px-8 counter hover-card card-bg tracking-[0.25em] font-semibold mt-4 shadow-lg rounded-lg`}>
                                 No
                             </button>
                         </div>
@@ -97,9 +93,7 @@ function Home(){
                 </div>
                 {showYes && (
                 <>
-                    <div className="w-screen h-screen absolute bottom-[204px] right-[-206px]">
-                    </div>
-                    <div className="z-[1] rounded-lg card-bg darker-pink mx-auto absolute left-[385px] top-[185px] font-semibold shadow-lg p-8">
+                    <div className="mx-4 rounded-lg card-bg darker-pink my-4 md:absolute md:left-[385px] md:top-[185px] font-semibold shadow-lg p-8">
                         <p>
                             If you're reading this, you've made a good choice!
                             <br/>
@@ -133,6 +127,7 @@ function Home(){
                             <br/>
                             Restaurant: Take-out Dawon / Eat at my place and cuddle / Arts n Craft
                             <br/>
+                            <br/>
                             Time: TBA
                             <br/>
                             Dress: Comfy
@@ -145,10 +140,10 @@ function Home(){
                     </div>
                 </>
                 )}
-                <div className={`flex justify-center items-center w-[500px] ${isSlideRight ? 'fade-out-animation fade-out mx-auto' : ''}`}>
-                    <HeartFiller startAnimation={startAnimation}/>
+                <div className={`flex justify-center items-center md:w-[500px] ${isSlideRight ? 'fade-out-animation fade-out mx-auto' : ''}`}>
+                    <HeartFiller id="heartfiller" startAnimation={startAnimation}/>
                 </div>
-                <div className={`w-1/2 pl-24 ${isSlideRight ? 'fade-out-animation fade-out' : ''}`}>
+                <div className={`my-4 md:my-32 ${isSlideRight ? 'fade-out-animation fade-out' : ''}`}>
                     <Person name='R.J. Geli' />
                 </div>
             </div>
